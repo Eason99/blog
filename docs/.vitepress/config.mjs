@@ -10,16 +10,12 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
-      // { text: 'Home', link: '/' },
-      // { text: 'Examples', link: '/markdown-examples' }
       { text: '主页', link: '/' },
       { text: '技术文章', link: '/technology/' },
       { text: '杂记', link: '/fussy/' },
       { text: '关于我', link: '/aboutme/' },
     ],
-
     sidebar: {
       '/technology/':[
         {
@@ -31,17 +27,21 @@ export default defineConfig({
         }
       ]
     },
-
     outline: {
       level: 'deep',
       label: '当前页',
     },
-
     docFooter: {
       prev: '上一页',
       next: '下一页'
     },
-
+    lastUpdated: {
+      text: '最后更新于',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'medium'
+      }
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Eason99/blog' }
     ]
